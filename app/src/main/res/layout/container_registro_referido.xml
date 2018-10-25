@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white_lg"
+            android:padding="@dimen/dim_8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dim_8dp"
+                android:textColor="@color/gray_dk_2"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="Ingresar Datos de Referido"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dim_8dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_12dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="4dp"
+                    app:contentPadding="@dimen/dim_8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_ap_paterno"
+                            style="@style/input_form_data"
+                            android:theme="@style/inputTheme"
+                            android:layout_marginBottom="@dimen/dim_8dp"
+                            android:hint="Apellido Paterno" />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_ap_materno"
+                            style="@style/input_form_data"
+                            android:theme="@style/inputTheme"
+                            android:layout_marginTop="@dimen/dim_8dp"
+                            android:hint="Apellido Materno" />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_nombres"
+                            style="@style/input_form_data"
+                            android:theme="@style/inputTheme"
+                            android:layout_marginTop="@dimen/dim_8dp"
+                            android:hint="Nombres" />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_direccion"
+                            style="@style/input_form_data"
+                            android:theme="@style/inputTheme"
+                            android:layout_marginTop="@dimen/dim_8dp"
+                            android:hint="Dirección cmpleta" />
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/txt_parentesco"
+                            style="@style/input_form_data"
+                            android:theme="@style/inputTheme"
+                            android:hint="Parentesco"
+                            android:layout_marginTop="@dimen/dim_8dp"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_12dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="4dp"
+                    app:contentPadding="@dimen/dim_8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:hint="Tipo de documento:"/>
+                                    <Spinner
+                                        android:id="@+id/sp_tipo_documento"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:layout_marginTop="@dimen/dim_12dp"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:theme="@style/inputTheme"
+                                    android:layout_marginBottom="@dimen/dim_05dp"
+                                    android:hint="Número de documento:"/>
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_dni"
+                                    style="@style/input_form_data"
+                                    android:theme="@style/inputTheme"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:hint="Operador Actual:"/>
+                                    <Spinner
+                                        android:id="@+id/sp_operador"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:layout_marginTop="@dimen/dim_12dp"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:theme="@style/inputTheme"
+                                    android:hint="Número de celular:"/>
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_n_celular"
+                                    style="@style/input_form_data"
+                                    android:theme="@style/inputTheme"
+                                    android:inputType="number"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_12dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="4dp"
+                    app:contentPadding="@dimen/dim_8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/ll_sp_condicion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_8dp"
+                            android:background="@color/black">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:orientation="vertical"
+                                android:background="@color/white">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:theme="@style/inputTheme"
+                                    android:hint="Condición:"/>
+                                <Spinner
+                                    android:id="@+id/sp_condicion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/input_form_data"
+                                    android:theme="@style/inputTheme"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginRight="@dimen/dim_1dp"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:hint="Tipo de servicio:"/>
+                                    <Spinner
+                                        android:id="@+id/sp_tipo_servicio"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dim_1dp"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:hint="Tiempo con operador:"/>
+                                    <Spinner
+                                        android:id="@+id/sp_tiempo_operador"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_enviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/btn_primary"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dim_16dp"
+                    android:text="Enviar"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

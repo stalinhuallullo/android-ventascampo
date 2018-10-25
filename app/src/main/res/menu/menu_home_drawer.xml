@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@mipmap/ic_home"
+            android:checked="true"
+            android:title="@string/s_home" />
+        <item
+            android:id="@+id/nav_referidos"
+            android:icon="@mipmap/ic_friends"
+            android:title="@string/s_referidos" />
+    </group>
+
+    <item android:title="Contacto">
+        <menu>
+            <item
+                android:id="@+id/nav_perfil"
+                android:icon="@mipmap/ic_profile"
+                android:title="@string/s_perfil" />
+        </menu>
+    </item>
+
+</menu>

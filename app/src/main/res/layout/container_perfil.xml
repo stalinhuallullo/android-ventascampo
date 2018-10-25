@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/dim_16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dim_16dp"
+                android:paddingBottom="@dimen/dim_16dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="@dimen/dim_8dp"
+                    android:text="Gustavo Salazar"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_text"
+                    android:textSize="18sp"
+                    android:layout_marginRight="@dimen/dim_8dp"
+                    android:text="gustavo_salazar@gmail.com"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_user_dni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_text"
+                    android:textSize="18sp"
+                    android:layout_marginRight="@dimen/dim_8dp"
+                    android:text="999999999"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_text"
+                    android:textSize="18sp"
+                    android:layout_marginRight="@dimen/dim_8dp"
+                    android:text="999999999"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txt_user_operadora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/label_text"
+                    android:textSize="18sp"
+                    android:layout_marginRight="@dimen/dim_8dp"
+                    android:text="999999999"/>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_32dp"
+                style="@style/btn_primary"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:text="Cerrar Sesión"/>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txt_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/label_text"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginRight="@dimen/dim_16dp"
+        android:layout_marginBottom="@dimen/dim_16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="v1"/>
+
+</RelativeLayout>

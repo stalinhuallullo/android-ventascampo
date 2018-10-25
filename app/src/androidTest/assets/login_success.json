@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "id": "106",
+      "nombres": "Pepe",
+      "apellido_paterno": "Perez",
+      "apellido_materno": "",
+      "dni": "88998888",
+      "telefono": "989898989",
+      "email": "pepe2@yopmail.com",
+      "operadora": "movistar"
+    }
+  ]
+}

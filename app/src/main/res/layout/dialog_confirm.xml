@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/dim_16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dim_8dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/label_text"
+                android:textColor="@color/gray_dk_2"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="@string/app_name"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                style="@style/label_text"
+                android:layout_marginTop="@dimen/dim_16dp"
+                android:textSize="18sp"
+                android:text="Descripcion"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_20dp"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/dim_4dp"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/btn_primary"
+                    android:textColor="@color/white"
+                    android:text="No"/>
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_si"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dim_4dp"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/btn_primary"
+                    android:textColor="@color/white"
+                    android:text="Si"/>
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

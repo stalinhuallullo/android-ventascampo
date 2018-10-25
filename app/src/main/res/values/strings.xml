@@ -1,0 +1,73 @@
+<resources>
+
+    <string name="movil_info">Renovacion\nPortabilidad\nMigracion\nAlta</string>
+    <string name="fijo_info">Internet\nCable\nTelefonia Fija</string>
+    <string name="s_whatsapp">¿Tienes alguna duda?</string>
+    <string name="s_whatsapp_a">¿Como uso la aplicacion?</string>
+    <string name="s_whatsapp_b">¿Dudas sobre mis referidos?</string>
+    <string name="s_enviar_email">Enviar Email</string>
+    <string name="s_home">Inicio</string>
+    <string name="s_select_business">Empresas</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="s_perfil">Perfil</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="s_name">Nombre:</string>
+    <string name="s_mis_billetes">Mis Billetes</string>
+    <string name="s_referidos">Referidos</string>
+    <string name="s_recaudacion">Mi Billetera</string>
+    <string name="s_notificaciones">Notificaciones</string>
+    <string name="s_tyc">Terminos y Condiciones</string>
+    <string name="s_tyc_doc">
+        AVISO LEGAL
+        \n\n
+        Las presentes condiciones de uso regulan el uso de los servicios ofrecidos por la Aplicación Móvil de SERVICOS GENERALES DE TECNOLOGIA S.A.C.  denominada LLEVATELO (en adelante, la "APLICACIÓN")
+        La utilización de la APLICACIÓN es únicamente para clientes de líneas móviles y servicios fijos no corporativos de todos los operadores que hay en el territorio peruano y le atribuye a Usted inmediatamente la condición de Usuario de la APLICACIÓN, por tanto implica la aceptación sin reservas de todas las disposiciones contenidas en las presentes Condiciones de Uso, así como en cualquier otro aviso legal o condiciones que las sustituyan, complementen y/o modifiquen que puedan encontrarse en la APLICACIÓN.
+        SERVICIOS GENERALES DE TECNOLOGIA SAC  podrá modificar las Condiciones de Uso completa o parcialmente, siendo efectivas estas modificaciones desde su publicación en la aplicación. Por consiguiente, se recomienda al Usuario revisar las Condiciones de Uso vigentes cada vez que utilice la APLICACIÓN.
+        Los productos y servicios ofrecidos dentro de la aplicación son responsabilidad exclusiva de cada establecimiento. SERVICIOS GENERALES EN TECNOLOGIA  no se responsabiliza por dichas promociones.
+        \n\n\n
+        EL SERVICIO
+        \n\n
+        El Servicio prestado por SERVICIOS GENERALES DE TECNOLOGIA SAC  en la APLICACIÓN es un programa de Referidos que premia la fidelidad de los Usuarios (en adelante, "BILLETERA") a través de un smartphone de Android o IOS; a través del cual, los clientes podrán hacer uso de la aplicacion para referir potenciales clientes que quieran un servicio de CLARO ya sea movil o fijo.
+        La descarga de la APLICACIÓN se realizará directamente desde las tiendas Play Store y App Store. Al descargar la APLICACIÓN, se solicita los datos del Usuario para validar que efectivamente corresponda a al titular de la linea movil.
+        En ningún caso, la información contenida en LLEVATELO y/o en cualquier parte de la APLICACIÓN debe ser considerada por el Usuario como completa o exhaustiva ya que la información contenida en los registros de referidos es referencial.
+        La APLICACIÓN fue desarrollada para iOS 9.0 en adelante y Android 5.0 en adelante.
+        \n\n\n
+        PRIVACIDAD
+        \n\n
+        La privacidad de su información es muy importante por consiguiente, esta información es tratada como información confidencial y nunca venderemos su información personal ni la de los referidos  a terceros.
+        El usuario acepta plenamente que tiene el consentimiento expreso de las personas que refiere a enviar sus datos mediante LA APLICACION.
+        \n\n\n
+        USO DE LA INFORMACIÓN
+        \n\n
+        Para propósitos internos y para alcanzar una mejor experiencia para el Usuario, SERVICIOS GENERALES DE TECNOLOGIA SAC obtiene información sobre el uso básico de la APLICACIÓN, como la descarga, los clics, las actualizaciones y consultas. Esta información es utilizada Íntegramente por  SERVICIOS GENERALES DE TECNOLOGIA SAC para  proporcionar una mejor experiencia del Usuario y es utilizada en forma de estadísticas, para poder mejorar las caracteristicas y prestaciones de LA APLICACION en base a los resultados de estos.
+        \n\n\n
+        DATOS PERSONALES
+        \n\n
+        Al emplear la APLICACIÓN, el usuario autoriza expresa e inequívocamente respecto al tratamiento de sus datos personales de acuerdo con la Ley Nº 29733 - Ley de Protección de Datos Personales y demás normas complementarias a efectos de permitir (i) que sean utilizados para la finalidad de la prestación del servicio de Referidos en LA APLICACION, por el plazo legal aplicable; y (ii) que sean compartidos y/o almacenados en los bancos de datos y sistemas informáticos de SERVICIOS GENERALES DE TECNOLOGIA SAC, así como sus empresas vinculadas o los terceros con los que éstas mantengan una relación contractual, para ejecutar cualquiera de los servicios relacionados a la finalidad establecida a través de la APLICACIÓN. Asimismo, el usuario de la APLICACIÓN se encuentra habilitado a ejercitar los derechos establecidos en la Ley Nº 29733 y su reglamento.
+        \n\n\n
+        USOS PROHIBIDOS
+        \n\n
+        El servicio es prestado con fines únicamente de captar referidos previa autorizacion previa del referido lo cual sera constatado por SERVICIOS GENERALES DE TECNOLOGIA SAC,  lo que está prohibida la adulteración, el uso fraudulento del LLEVATELO, mediante la modificación, edición y/o cualquier otra alteración de los mismos.
+        EL USUARIO ASUMIRÁ COMPLETAMENTE LA RESPONSABILIDAD QUE PUDIERA EMANAR DE LA REALIZACIÓN DE ESTOS USOS PROHIBIDOS.
+        \n\n\n
+        RESPONSABILIDAD
+        \n\n
+        SERVICIOS GENERALES DE TECNOLOGIA SAC no será responsable por cualquier daño o perjuicio causado por el uso de la APLICACIÓN LLEVATELO. Cualquier consulta respecto al contenido de la APLICACIÓN de LLEVATELO deberá ser presentada a  SERVICIOS GENERALES DE TECNOLOGIA SAC a través de sus Centros de Atención al Cliente u oficinas comerciales,
+        Los premios indicados en la APLICACION  no son transferibles ni cejables con otras promociones y/o campañas, convenios o alianzas. Los productos y servicios ofrecidos son responsabilidad exclusiva del establecimiento.  SERVICIOS GENERALES DE TECNOLOGIA SAC no se responsabiliza por el error en los datos enviados por el usuario.
+
+    </string>
+    <string name="s_tarifa_comisiones">Tarifa y Comisiones</string>
+    <string name="s_new_company_registered">Los datos para el registro fueron enviados exitosamente.</string>
+    <string name="s_new_company_registered_error">Hubo un error al registrar los datos, envíe un correo directamente a contacto@sgtel.pe.</string>
+    <string name="s_cobro_message">Para cobrar deberas enviar tus recibos por honorarios a llevatelo.claro@gmail.com
+        \n\n
+        A nombre de SGTEL SAC con RUC:20517723186  poniendo como referencia: Asesoría en ventas de servicio de telecomunicaciones.
+        \n\n
+        Una vez recibido el correo le indicaremos los pasos siguientes.</string>
+    <string name="nav_promociones">Promociones</string>
+    <string name="no_disponible">NO DISPONIBLE\npara este país</string>
+    <string name="su_empresa_aqui">SU EMPRESA\npuede estar aquí</string>
+    <string name="le_interesa_contactenos">¿Le interesa este servicio? ¡CONTÁCTENOS AQUI!</string>
+</resources>
