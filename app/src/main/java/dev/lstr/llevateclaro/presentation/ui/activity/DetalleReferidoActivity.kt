@@ -4,6 +4,7 @@ import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import dev.lstr.llevateclaro.R
@@ -60,34 +61,37 @@ class DetalleReferidoActivity : BaseActivity() {
         var default_message = ""
         var is_completed = false
 
-        if (data.datosen == "A") {
+        if (data.status_data == "1") {
             v_datos_enviados.text = "✓"
            // v_datos_enviados.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
             v_datos_enviados.setBackgroundResource(R.drawable.borderdetallegreen)
             default_message = "Estas en el proceso de evaluación."
-        } else if (data.datosen == "R") {
+        } else if (data.status_data == "2") {
             v_datos_enviadosx.text = "X"
             //v_datos_enviadosx.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             v_datos_enviadosx.setBackgroundResource(R.drawable.borderdetallered)
             default_message = "Estas en el proceso de evaluación."
         }
-        if (data.califica == "A") {
+
+
+        if (data.status_evaluation == "1") {
             v_calificacion.text = "✓"
 //            v_calificacion.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
             v_calificacion.setBackgroundResource(R.drawable.borderdetallegreen)
             default_message = "Estas en el proceso de venta."
-        } else if (data.califica == "R") {
+        } else if (data.status_evaluation == "2") {
             v_calificacionx.text = "X"
 //            v_calificacionx.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             v_calificacionx.setBackgroundResource(R.drawable.borderdetallered)
             default_message = "Lo sentimos, su referido no califica."
         }
-        if (data.venta == "A") {
+
+        if (data.status_sale == "1") {
             v_venta_exitosa.text = "✓"
 //            v_venta_exitosa.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
             v_venta_exitosa.setBackgroundResource(R.drawable.borderdetallegreen)
             default_message = "Estas en el proceso de entrega."
-        } else if (data.venta == "R") {
+        } else if (data.status_sale == "1") {
             v_venta_exitosax.text = "X"
             //v_venta_exitosax.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
             v_venta_exitosax.setBackgroundResource(R.drawable.borderdetallered)
@@ -97,17 +101,17 @@ class DetalleReferidoActivity : BaseActivity() {
 
         if (action_type == action_detalle_referido_movil) {
             tv_ultimo_paso.text = "Entregado: "
-            if (data.entregado == "A") {
+            if (data.status_delivery == "1") {
                 v_entregado.text = "✓"
                 //v_entregado.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
                 v_entregado.setBackgroundResource(R.drawable.borderdetallegreen)
                 tv_acumulado.text = ""
                 tv_mensaje.visibility = View.INVISIBLE
                 ll_acumulado.visibility = View.VISIBLE
-                tv_acumulado.text = "Acumulaste S/${data.acomulado}"
+                tv_acumulado.text = "Acumulaste S/15.00" //"Acumulaste S/${data.acomulado}"
                 default_message = ""
                 is_completed = true
-            } else if (data.entregado == "R") {
+            } else if (data.status_delivery == "2") {
                 v_entregadox.text = "X"
                 //v_entregadox.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 v_entregadox.setBackgroundResource(R.drawable.borderdetallered)
@@ -115,24 +119,24 @@ class DetalleReferidoActivity : BaseActivity() {
             }
         } else if (action_type == action_detalle_referido_fijo) {
             tv_ultimo_paso.text = "Instalado: "
-            if (data.instalado == "A") {
+            if (data.status_delivery == "1") {
                 v_entregado.text = "✓"
                 //v_entregado.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
                 v_entregado.setBackgroundResource(R.drawable.borderdetallegreen)
                 tv_acumulado.text = ""
                 tv_mensaje.visibility = View.INVISIBLE
-                ll_acumulado.visibility = View.VISIBLE
-                tv_acumulado.text = "Acumulaste S/${data.acomulado}"
+                //ll_acumulado.visibility = View.VISIBLE
+                //tv_acumulado.text = "Acumulaste S/13.00"
                 default_message = ""
                 is_completed = true
-            } else if (data.instalado == "R") {
+            } else if (data.status_delivery == "2") {
                 v_entregadox.text = "X"
                // v_entregadox.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
                 v_entregadox.setBackgroundResource(R.drawable.borderdetallered)
                 default_message = "No instalado."
             }
         }
-
+/*
         if (data.mensaje_extra != null && data.mensaje_extra != "") {
             tv_mensaje.text = data.mensaje_extra
         } else {
@@ -144,33 +148,52 @@ class DetalleReferidoActivity : BaseActivity() {
         } else {
             cv_mensaje.visibility = View.VISIBLE
             cv_mensaje.setBackgroundColor(ContextCompat.getColor(this, R.color.green))
-        }
+        }*/
     }
 
     fun showDataObs(data: DetalleReferidoObsE) {
 
-        if (data.datosen_obs != null && !data.datosen_obs.trim().equals("")) {
-            v_datos_enviados_text.text = data.datosen_obs
+        if (data.observation_data != null && !data.observation_data.trim().equals("")) {
+            Log.d("observation_data", data.observation_data)
+
+            v_datos_enviados_text.text = data.observation_data
             rl_v_datos_enviados_text.visibility = View.VISIBLE
         } else {
+            Log.d("observation_data", "=======")
+
             rl_v_datos_enviados_text.visibility = View.GONE
         }
-        if (data.califica_obs != null && !data.califica_obs.trim().equals("")) {
-            v_calificacion_text.text = data.califica_obs
+
+        if (data.observation_evaluation != null && !data.observation_evaluation.trim().equals("")) {
+            Log.d("observation_evaluation", data.observation_evaluation)
+
+            v_calificacion_text.text = data.observation_evaluation
             rl_v_calificacion_text.visibility = View.VISIBLE
         } else {
+            Log.d("observation_data", "=======")
+
             rl_v_calificacion_text.visibility = View.GONE
         }
-        if (data.ven_obs != null && !data.ven_obs.trim().equals("")) {
-            v_venta_exitosa_text.text = data.ven_obs
+
+        if (data.observation_sale != null && !data.observation_sale.trim().equals("")) {
+            Log.d("observation_sale", data.observation_sale)
+
+            v_venta_exitosa_text.text = data.observation_sale
             rl_v_venta_exitosa_text.visibility = View.VISIBLE
         } else {
+            Log.d("observation_data", "=======")
+
             rl_v_venta_exitosa_text.visibility = View.GONE
         }
-        if (data.entre_obs != null && !data.entre_obs.trim().equals("")) {
-            v_entregado_text.text = data.entre_obs
+
+        if (data.observation_delivery != null && !data.observation_delivery.trim().equals("")) {
+            Log.d("observation_delivery", data.observation_delivery)
+
+            v_entregado_text.text = data.observation_delivery
             rl_v_entregado_text.visibility = View.VISIBLE
         } else {
+            Log.d("observation_data", "=======")
+
             rl_v_entregado_text.visibility = View.GONE
         }
     }

@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/colorPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,91 +10,53 @@
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:background="@color/white_lg"
+            android:orientation="vertical"
             android:padding="@dimen/dim_8dp">
 
             <TextView
+                android:id="@+id/txt_title_referred"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dim_8dp"
+                android:text="@string/input_data_client"
                 android:textColor="@color/gray_dk_2"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:text="Ingresar Datos de Referido"/>
+                android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/image_picasso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dim_8dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dim_8dp">
 
                 <android.support.v7.widget.CardView
-                    android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/dim_12dp"
-                    app:cardElevation="5dp"
                     app:cardCornerRadius="4dp"
+                    app:cardElevation="5dp"
                     app:contentPadding="@dimen/dim_8dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-                        <android.support.v7.widget.AppCompatEditText
-                            android:id="@+id/txt_ap_paterno"
-                            style="@style/input_form_data"
-                            android:theme="@style/inputTheme"
-                            android:layout_marginBottom="@dimen/dim_8dp"
-                            android:hint="Apellido Paterno" />
-                        <android.support.v7.widget.AppCompatEditText
-                            android:id="@+id/txt_ap_materno"
-                            style="@style/input_form_data"
-                            android:theme="@style/inputTheme"
-                            android:layout_marginTop="@dimen/dim_8dp"
-                            android:hint="Apellido Materno" />
-                        <android.support.v7.widget.AppCompatEditText
-                            android:id="@+id/txt_nombres"
-                            style="@style/input_form_data"
-                            android:theme="@style/inputTheme"
-                            android:layout_marginTop="@dimen/dim_8dp"
-                            android:hint="Nombres" />
-                        <android.support.v7.widget.AppCompatEditText
-                            android:id="@+id/txt_direccion"
-                            style="@style/input_form_data"
-                            android:theme="@style/inputTheme"
-                            android:layout_marginTop="@dimen/dim_8dp"
-                            android:hint="Dirección cmpleta" />
-                        <android.support.v7.widget.AppCompatEditText
-                            android:id="@+id/txt_parentesco"
-                            style="@style/input_form_data"
-                            android:theme="@style/inputTheme"
-                            android:hint="Parentesco"
-                            android:layout_marginTop="@dimen/dim_8dp"/>
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
 
-
-
-                <android.support.v7.widget.CardView
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dim_12dp"
-                    app:cardElevation="5dp"
-                    app:cardCornerRadius="4dp"
-                    app:contentPadding="@dimen/dim_8dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -101,43 +64,40 @@
                             <RelativeLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:background="@color/black">
+                                android:layout_weight="1">
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="@dimen/dim_1dp"
-                                    android:orientation="vertical"
-                                    android:background="@color/white">
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
                                     <android.support.v7.widget.AppCompatTextView
                                         style="@style/input_form_data"
-                                        android:theme="@style/inputTheme"
-                                        android:hint="Tipo de documento:"/>
-                                    <Spinner
-                                        android:id="@+id/sp_tipo_documento"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
+                                        android:hint="Nombres"
+                                        android:theme="@style/inputTheme" />
+                                    <android.support.v7.widget.AppCompatEditText
+                                        android:id="@+id/txt_names"
                                         style="@style/input_form_data"
-                                        android:layout_marginTop="@dimen/dim_12dp"
-                                        android:theme="@style/inputTheme"/>
+                                        android:inputType="text"
+                                        android:theme="@style/inputTheme" />
                                 </LinearLayout>
                             </RelativeLayout>
+
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:orientation="vertical"
-                                android:background="@color/white">
+                                android:background="@color/white"
+                                android:orientation="vertical">
                                 <android.support.v7.widget.AppCompatTextView
                                     style="@style/input_form_data"
-                                    android:theme="@style/inputTheme"
-                                    android:layout_marginBottom="@dimen/dim_05dp"
-                                    android:hint="Número de documento:"/>
+                                    android:hint="Apellidos"
+                                    android:theme="@style/inputTheme" />
                                 <android.support.v7.widget.AppCompatEditText
-                                    android:id="@+id/txt_dni"
+                                    android:id="@+id/txt_last_names"
                                     style="@style/input_form_data"
-                                    android:theme="@style/inputTheme"
-                                    android:inputType="number"/>
+                                    android:inputType="text"
+                                    android:theme="@style/inputTheme" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -147,96 +107,7 @@
                             android:layout_marginTop="@dimen/dim_20dp"
                             android:orientation="horizontal">
                             <RelativeLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:background="@color/black">
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="@dimen/dim_1dp"
-                                    android:orientation="vertical"
-                                    android:background="@color/white">
-                                    <android.support.v7.widget.AppCompatTextView
-                                        style="@style/input_form_data"
-                                        android:theme="@style/inputTheme"
-                                        android:hint="Operador Actual:"/>
-                                    <Spinner
-                                        android:id="@+id/sp_operador"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        style="@style/input_form_data"
-                                        android:layout_marginTop="@dimen/dim_12dp"
-                                        android:theme="@style/inputTheme"/>
-                                </LinearLayout>
-                            </RelativeLayout>
-                            <LinearLayout
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:orientation="vertical"
-                                android:background="@color/white">
-                                <android.support.v7.widget.AppCompatTextView
-                                    style="@style/input_form_data"
-                                    android:layout_marginBottom="@dimen/dim_1dp"
-                                    android:theme="@style/inputTheme"
-                                    android:hint="Número de celular:"/>
-                                <android.support.v7.widget.AppCompatEditText
-                                    android:id="@+id/txt_n_celular"
-                                    style="@style/input_form_data"
-                                    android:theme="@style/inputTheme"
-                                    android:inputType="number"/>
-                                </LinearLayout>
-                            </LinearLayout>
-                        </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-
-
-                <android.support.v7.widget.CardView
-                    android:layout_gravity="center"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dim_12dp"
-                    app:cardElevation="5dp"
-                    app:cardCornerRadius="4dp"
-                    app:contentPadding="@dimen/dim_8dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:id="@+id/ll_sp_condicion"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8dp"
-                            android:background="@color/black">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="@dimen/dim_1dp"
-                                android:orientation="vertical"
-                                android:background="@color/white">
-                                <android.support.v7.widget.AppCompatTextView
-                                    style="@style/input_form_data"
-                                    android:theme="@style/inputTheme"
-                                    android:hint="Condición:"/>
-                                <Spinner
-                                    android:id="@+id/sp_condicion"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    style="@style/input_form_data"
-                                    android:theme="@style/inputTheme"/>
-                            </LinearLayout>
-                        </RelativeLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_20dp"
-                            android:orientation="horizontal">
-                            <RelativeLayout
+                                android:id="@+id/ll_sp_modality"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -251,15 +122,50 @@
                                     <android.support.v7.widget.AppCompatTextView
                                         style="@style/input_form_data"
                                         android:theme="@style/inputTheme"
-                                        android:hint="Tipo de servicio:"/>
+                                        android:paddingBottom="@dimen/dim_13dp"
+                                        android:hint="Modalidad"/>
                                     <Spinner
-                                        android:id="@+id/sp_tipo_servicio"
+                                        android:id="@+id/sp_modality"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         style="@style/input_form_data"
                                         android:theme="@style/inputTheme"/>
                                 </LinearLayout>
                             </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/ll_sp_type_sale"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dim_1dp"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:paddingBottom="@dimen/dim_13dp"
+                                        android:hint="Tipo de venta"/>
+                                    <Spinner
+                                        android:id="@+id/sp_type_sale"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:orientation="horizontal">
 
                             <RelativeLayout
                                 android:layout_width="0dp"
@@ -276,9 +182,190 @@
                                     <android.support.v7.widget.AppCompatTextView
                                         style="@style/input_form_data"
                                         android:theme="@style/inputTheme"
-                                        android:hint="Tiempo con operador:"/>
+                                        android:paddingBottom="@dimen/dim_13dp"
+                                        android:hint="Tipo de documento"/>
                                     <Spinner
-                                        android:id="@+id/sp_tiempo_operador"
+                                        android:id="@+id/sp_type_document"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dim_1dp"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:hint="Número de documento:"/>
+                                    <android.support.v7.widget.AppCompatEditText
+                                        android:id="@+id/txt_number_document"
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:inputType="number"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_direction_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:hint="Dirección"
+                                    android:theme="@style/inputTheme"
+                                    android:paddingBottom="@dimen/dim_13dp"/>
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_direction"
+                                    style="@style/input_form_data"
+                                    android:inputType="text"
+                                    android:theme="@style/inputTheme" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_direction_referred_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:hint="Dirección de referencia"
+                                    android:theme="@style/inputTheme"
+                                    android:paddingBottom="@dimen/dim_13dp"/>
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_direction_referred"
+                                    style="@style/input_form_data"
+                                    android:inputType="text"
+                                    android:theme="@style/inputTheme" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_district_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:hint="Distrito"
+                                    android:theme="@style/inputTheme"
+                                    android:paddingBottom="@dimen/dim_13dp"/>
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_district"
+                                    style="@style/input_form_data"
+                                    android:inputType="text"
+                                    android:theme="@style/inputTheme" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_sp_plan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:hint="Plan"
+                                    android:theme="@style/inputTheme"
+                                    android:paddingBottom="@dimen/dim_13dp"/>
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_plan"
+                                    style="@style/input_form_data"
+                                    android:inputType="text"
+                                    android:theme="@style/inputTheme" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_operatos_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dim_1dp"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:paddingBottom="@dimen/dim_13dp"
+                                        android:hint="Operador"/>
+                                    <Spinner
+                                        android:id="@+id/sp_operator"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/ll_operator_cedent"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/dim_1dp"
+                                android:background="@color/black">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dim_1dp"
+                                    android:orientation="vertical"
+                                    android:background="@color/white">
+                                    <android.support.v7.widget.AppCompatTextView
+                                        style="@style/input_form_data"
+                                        android:theme="@style/inputTheme"
+                                        android:paddingBottom="@dimen/dim_13dp"
+                                        android:hint="Operador cedente"/>
+                                    <Spinner
+                                        android:id="@+id/sp_operator_cedent"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         style="@style/input_form_data"
@@ -287,18 +374,114 @@
                             </RelativeLayout>
                         </LinearLayout>
 
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:hint="Numero Movil"
+                                    android:theme="@style/inputTheme" />
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_number_movil"
+                                    style="@style/input_form_data"
+                                    android:inputType="number"
+                                    android:theme="@style/inputTheme" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim_20dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dim_1dp"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.AppCompatTextView
+                                    style="@style/input_form_data"
+                                    android:hint="Observacion"
+                                    android:theme="@style/inputTheme" />
+                                <android.support.v7.widget.AppCompatEditText
+                                    android:id="@+id/txt_observation"
+                                    style="@style/input_form_data"
+                                    android:layout_width="match_parent"
+                                    android:ems="10"
+                                    android:gravity="left|top"
+                                    android:theme="@style/inputTheme"
+                                    android:inputType="textMultiLine"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
 
-                <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/btn_enviar"
-                    android:layout_width="wrap_content"
+                <!--<android.support.v7.widget.CardView
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/btn_primary"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/dim_16dp"
-                    android:text="Enviar"/>
+                    android:layout_marginTop="@dimen/dim_12dp"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="4dp"
+                    app:contentPadding="@dimen/dim_8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/btn_addFiles"
+                            style="@style/btn_primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dim_16dp"
+                            android:text="Agregar imagen" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/btn_addFiles"
+                        android:text="Agregar imagen"
+                        android:layout_alignParentBottom="true"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_enviar"
+                        style="@style/btn_primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dim_16dp"
+                        android:text="Enviar" />
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

@@ -18,11 +18,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp">
-            <LinearLayout
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:layout_gravity="center_vertical">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    style="@style/label_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuevo Cliente"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?attr/actionBarSize"
@@ -38,35 +54,38 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
+
                         <android.support.v7.widget.AppCompatImageView
                             android:id="@+id/iv_main_icon"
                             android:layout_width="wrap_content"
                             android:layout_height="72dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/icon_movil_white"/>
+                            android:src="@drawable/icon_movil_white" />
+
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/tv_title"
+                            style="@style/label_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            style="@style/label_text"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="@dimen/dim_8dp"
+                            android:text="Nuevo Cliente"
                             android:textColor="@color/white"
                             android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:text="Movil"/>
+                            android:textStyle="bold" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
+
                         <android.support.v7.widget.AppCompatImageView
                             android:id="@+id/iv_fb_icon"
                             android:layout_width="wrap_content"
                             android:layout_height="75dp"
                             android:layout_gravity="center_horizontal"
-                            android:src="@mipmap/ic_fb"/>
+                            android:src="@mipmap/ic_fb" />
                         <android.support.v7.widget.AppCompatTextView
                             android:id="@+id/tv_fb_title"
                             android:layout_width="wrap_content"
@@ -80,14 +99,14 @@
                             android:text="Ver mas promos"/>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+            </LinearLayout>-->
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-            </android.support.v7.widget.Toolbar>
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"></android.support.v7.widget.Toolbar>
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>

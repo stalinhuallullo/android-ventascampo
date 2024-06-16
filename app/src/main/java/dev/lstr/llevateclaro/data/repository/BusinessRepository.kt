@@ -10,4 +10,6 @@ import dev.lstr.llevateclaro.data.datasource.rest.RestUserSession
  */
 object BusinessRepository {
     fun provideBusiness(): BusinessDataSource = RestBusinnes()
+
+    fun provideImages(): BusinessDataSource = RestBusinnes()
 }

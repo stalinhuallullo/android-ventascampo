@@ -26,6 +26,10 @@
     <color name="green_dark">#1f844a</color>
     <color name="yellow">#c9df20</color>
 
+    <color name="colorEspera">#ffa500</color>
+    <color name="colorAprobado">#008000</color>
+    <color name="colorRechazado">#ff0000</color>
+
     <color name="btn_prim">#216a99</color>
     <color name="btn_prim_pressed">#2980b9</color>
 </resources>

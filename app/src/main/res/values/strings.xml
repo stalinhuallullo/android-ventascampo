@@ -70,4 +70,9 @@
     <string name="no_disponible">NO DISPONIBLE\npara este país</string>
     <string name="su_empresa_aqui">SU EMPRESA\npuede estar aquí</string>
     <string name="le_interesa_contactenos">¿Le interesa este servicio? ¡CONTÁCTENOS AQUI!</string>
+
+
+    <!---->
+    <string name="add_client">Agregar un nuevo cliente</string>
+    <string name="input_data_client">Ingresar Datos del Cliente</string>
 </resources>

@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,7 @@ class ListaReferidoMovilFragment : BaseFragment() {
         rv_referidos.setHasFixedSize(true)
         referidosAdapter = ReferidosAdapter(referidosList, object : ReferidosAdapter.Callback {
             override fun onItemSelected(pos: Int) {
+                Log.d("POS ", pos.toString())
                 gotoReferidoDetalle(referidosList.get(pos))
             }
         })
@@ -71,9 +73,15 @@ class ListaReferidoMovilFragment : BaseFragment() {
     }
 
     private fun gotoReferidoDetalle(item: ReferidoE) {
+        Log.d("aaaaaa", "================================")
+        Log.d("item.id", item.id)
+
         val it = Intent(context, DetalleReferidoActivity::class.java)
-        it.putExtra("id", item.id_referido)
-        it.putExtra("name", "${item.nombres} ${item.apellido_paterno} ${item.apellido_materno}")
+        //it.putExtra("id", item.id_referido)
+
+        it.putExtra("id", item.id)
+        //it.putExtra("name", "${item.nombres} ${item.apellido_paterno} ${item.apellido_materno}")
+        it.putExtra("name", "${item.last_name} ${item.name}")
         it.putExtra("action", DetalleReferidoActivity.action_detalle_referido_movil)
         startActivity(it)
     }

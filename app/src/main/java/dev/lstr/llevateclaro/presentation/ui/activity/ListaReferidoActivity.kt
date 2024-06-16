@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.content.ContextCompat
+import android.util.Log
 import android.view.MenuItem
 import dev.lstr.llevateclaro.R
 import dev.lstr.llevateclaro.presentation.ui.fragment.ListaReferidoFijoFragment
@@ -54,6 +55,7 @@ class ListaReferidoActivity : BaseActivity(){
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         val id = item!!.getItemId()
+        Log.d("onOptionsItemSelected", id.toString())
         when(id){
             android.R.id.home -> onBackPressed()
         }
@@ -65,16 +67,20 @@ class ListaReferidoActivity : BaseActivity(){
         val mTitleList = ArrayList<String>()
 
         override fun getItem(position: Int): Fragment {
+            Log.i("getItem", position.toString())
             return mFragmentList[position]
         }
         override fun getCount(): Int {
+            Log.i("getCount", mFragmentList.size.toString())
             return mFragmentList.size
         }
         fun addFragment(fragment:Fragment, title: String){
+            Log.i("addGragment", title)
             mFragmentList.add(fragment)
             mTitleList.add(title)
         }
         override fun getPageTitle(position: Int):CharSequence{
+            Log.i("getPageTitle", position.toString())
             return mTitleList[position]
         }
     }

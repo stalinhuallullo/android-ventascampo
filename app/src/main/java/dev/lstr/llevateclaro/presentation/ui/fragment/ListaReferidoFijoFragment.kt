@@ -69,8 +69,10 @@ class ListaReferidoFijoFragment : BaseFragment() {
 
     private fun gotoReferidoDetalle(item: ReferidoE) {
         val it = Intent(context, DetalleReferidoActivity::class.java)
-        it.putExtra("id", item.id_referido)
-        it.putExtra("name", "${item.nombres} ${item.apellido_paterno} ${item.apellido_materno}")
+        //it.putExtra("id", item.id_referido)
+        it.putExtra("id", item.id)
+        //it.putExtra("name", "${item.nombres} ${item.apellido_paterno} ${item.apellido_materno}")
+        it.putExtra("name", "${item.last_name} ${item.name}")
         it.putExtra("action", DetalleReferidoActivity.action_detalle_referido_fijo)
         startActivity(it)
     }

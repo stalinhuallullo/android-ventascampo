@@ -8,6 +8,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import android.widget.ImageView
+import android.widget.Toast
 import dev.lstr.llevateclaro.R
 import dev.lstr.llevateclaro.data.datasource.pref.CurrentUser
 import dev.lstr.llevateclaro.data.model.S
@@ -27,6 +28,7 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         initSettings()
         init()
         openHomeFragment()
+        Toast.makeText(this, "openHomeFragment", Toast.LENGTH_SHORT).show()
 
         TrackerGA.getInstance(this).registerScreen("Inicio")
     }
@@ -39,9 +41,9 @@ class HomeActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         val iv_logo = nav_view.getHeaderView(0).findViewById<ImageView>(R.id.iv_logo)
 
-        when(CurrentUser.getInstance(this).getBusiness()){
+        /*when(CurrentUser.getInstance(this).getBusiness()){
             S.key_claro_peru -> iv_logo.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.logo_empresa_claro))
-        }
+        }*/
     }
 
     fun init(){

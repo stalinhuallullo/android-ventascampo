@@ -7,6 +7,7 @@ import java.util.ArrayList
  */
 object BusinessModel {
     data class RegisterReferalResult(val mensaje: String, val error: String)
+    data class RegisterReferalResultImage(val mensaje: String, val error: String)
     data class ListReferalResult(val data: ArrayList<ReferidoE>, val error: String)
     data class DetailReferalResult(val data: ArrayList<DetalleReferidoE>, val error: String)
     data class ResumenAcumuladoResult(val data: AcumuladoE, val error: String)

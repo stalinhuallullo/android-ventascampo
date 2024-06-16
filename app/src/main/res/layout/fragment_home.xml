@@ -22,7 +22,7 @@
             android:layout_height="64dp"
             android:src="@drawable/logotipo_color" />
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dim_16dp"
@@ -60,7 +60,7 @@
                     android:adjustViewBounds="true"
                     android:src="@drawable/icon_money" />
             </RelativeLayout>
-        </LinearLayout>
+        </LinearLayout>-->
 
 
         <TextView
@@ -70,7 +70,7 @@
             android:layout_marginTop="@dimen/dim_16dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:text="Escoge el tipo de servicio"/>
+            android:text="@string/add_client"/>
 
 
         <LinearLayout
@@ -87,33 +87,41 @@
                 android:layout_margin="@dimen/dim_8dp"
                 app:cardCornerRadius="4dp"
                 app:cardElevation="4dp">
+
                 <LinearLayout
                     android:id="@+id/ll_menu_movil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
                     <android.support.v7.widget.AppCompatImageView
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="@dimen/dim_8dp"
                         android:layout_marginBottom="@dimen/dim_8dp"
-                        android:src="@drawable/icon_movil"/>
-                    <android.support.v7.widget.AppCompatTextView
+                        android:src="@drawable/add_user" />
+
+                    <!--<android.support.v7.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Movil"
                         android:textColor="@color/colorPrimary"
                         android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:text="Movil"/>
+                        android:textStyle="bold" />-->
+
                     <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/movil_info"/>
+                        android:gravity="center"
+                        android:text="@string/movil_info" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
             <android.support.v7.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

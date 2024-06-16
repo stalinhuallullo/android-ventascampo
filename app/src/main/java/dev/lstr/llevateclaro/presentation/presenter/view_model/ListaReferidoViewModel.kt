@@ -2,6 +2,7 @@ package dev.lstr.llevateclaro.presentation.presenter.view_model
 
 import android.arch.lifecycle.*
 import android.content.Context
+import android.util.Log
 import dev.lstr.llevateclaro.data.datasource.DataSourceCallback
 import dev.lstr.llevateclaro.data.datasource.pref.CurrentUser
 import dev.lstr.llevateclaro.data.model.ReferidoE
@@ -34,15 +35,16 @@ class ListaReferidoViewModel : ViewModel(), LifecycleObserver {
 
         userSessionDataSource.listaReferido(user_id, tipo_action, object: DataSourceCallback {
             override fun onSuccess(data: Object) {
+                Log.d("DATA", data.toString())
                 val dataList = data as ArrayList<ReferidoE>
                 listaReferidoLiveData.value = dataList
+                Log.d("listaReferidoLiveData", listaReferidoLiveData.toString())
             }
             override fun onError(error: String) {
                 messageLiveData.value = error
             }
         })
     }
-
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     private fun unSubscribeViewModel() {
